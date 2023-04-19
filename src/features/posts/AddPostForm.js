@@ -21,6 +21,7 @@ export const AddPostForm = () => {
       dispatch(postAdded(title, content, userId))
       setTitle('')
       setContent('')
+      setUserId('')
     }
   }
   
@@ -44,7 +45,7 @@ export const AddPostForm = () => {
           value={title}
           onChange={onTitleChanged}
         />
-        <label htmlFor='postAuthor'>Author</label>
+        <label htmlFor='postAuthor'>Author:</label>
         <select id="postAuthor" value={userId} onChange={onAuthorChanged} >
           <option value=""></option>
           {usersOptions}
